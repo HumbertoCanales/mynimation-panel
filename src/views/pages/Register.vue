@@ -120,11 +120,11 @@
     </div>
 
     <!-- background triangle shape  -->
-    <img
+    <!-- <img
       class="auth-mask-bg"
       height="190"
       :src="require(`@/assets/images/misc/mask-${$vuetify.theme.dark ? 'dark':'light'}.png`)"
-    >
+    > -->
 
     <!-- tree -->
     <!-- <v-img

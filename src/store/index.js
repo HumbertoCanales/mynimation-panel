@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-import { db } from '@/utils/firebase'
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
@@ -29,32 +28,34 @@ export default new Vuex.Store({
     // Categories
     async getCategories({ commit }) {
       const categories = []
-      await db.collection('categories').get()
+      await axios.get(`${api}/categories`)
         .then(res => {
-          res.forEach(doc => {
-            console.log(doc.id)
-            console.log(doc.data())
-            const category = doc.data()
-            category.id = doc.id
+          res.data.forEach(category => {
             categories.push(category)
           })
           commit('setCategories', categories)
         })
     },
     async addCategory({ commit }, data) {
-      await db.collection('categories').add({
+      await axios.post(`${api}/categories`, {
         name: data.name,
         description: data.description,
       })
+        .catch(error => {
+          console.log(error)
+        })
     },
     async editCategory({ commit }, data) {
-      await db.collection('categories').doc(data.id).update({
+      await axios.put(`${api}/categories/${data.id}`, {
         name: data.name,
         description: data.description,
       })
+        .catch(error => {
+          console.log(error)
+        })
     },
     async deleteCategory({ commit }, data) {
-      await db.collection('categories').doc(data.id).delete()
+      await axios.delete(`${api}/categories/${data.id}`)
     },
 
     // Movies

@@ -34,16 +34,21 @@
         <div class="mx-6 d-flex justify-space-between">
           <span>
             &copy; 2022 <a
-              href="https://github.com/GutyHT-ML/mynimation"
+              href="https://github.com/alexferlozano/tolin"
               class="text-decoration-none"
               target="_blank"
             >SALUT MONDE</a></span>
           <span class="d-sm-inline d-none">
             <a
-              href="https://github.com/GutyHT-ML/mynimation"
+              href="https://github.com/alexferlozano/tolin"
               target="_blank"
               class="me-6 text--secondary text-decoration-none"
             >API</a>
+            <a
+              href="https://github.com/HumbertoCanales/mynimation-panel"
+              target="_blank"
+              class="me-6 text--secondary text-decoration-none"
+            >PANEL</a>
           </span>
         </div>
       </div>
