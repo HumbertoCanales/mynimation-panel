@@ -1,7 +1,6 @@
 <template>
   <div>
     <v-data-table
-      v-if="!isLoading"
       :headers="headers"
       :items="studios"
       class="table-rounded"

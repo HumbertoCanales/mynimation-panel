@@ -3,6 +3,9 @@ module.exports = {
   env: {
     node: true,
   },
+  ignorePatterns: [
+    "**/*"
+  ],
   extends: ['eslint:recommended', 'plugin:vue/recommended', '@vue/airbnb'],
   parserOptions: {
     parser: 'babel-eslint',

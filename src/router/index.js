@@ -1,12 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import firebase from "firebase/compat/app"
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    redirect: 'categories',
+    redirect: 'login',
   },
   {
     path: '/dashboard',
@@ -29,11 +30,12 @@ const routes = [
     component: () => import('@/views/studios/Studios.vue'),
   },
   {
-    path: '/pages/login',
-    name: 'pages-login',
+    path: '/login',
+    name: 'login',
     component: () => import('@/views/pages/Login.vue'),
     meta: {
       layout: 'blank',
+      isPublic: true
     },
   },
   {
@@ -62,6 +64,21 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes,
+})
+
+router.beforeEach((to, from, next) => {
+  let usuario = firebase.auth().currentUser
+  let authorization = to.matched.some(record => !record.meta.isPublic)
+
+  if (authorization && !usuario){
+    next('login')
+  } else if (!authorization && usuario) {
+    next('dashboard')
+  } else {
+    next()
+  }
+
+  return false
 })
 
 export default router

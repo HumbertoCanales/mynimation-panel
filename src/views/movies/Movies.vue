@@ -1,7 +1,6 @@
 <template>
   <div>
     <v-data-table
-      v-if="!isLoading"
       :headers="headers"
       :items="movies"
       class="table-rounded"

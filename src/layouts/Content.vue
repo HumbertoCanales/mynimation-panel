@@ -12,6 +12,7 @@
         <div class="d-flex align-center mx-6">
           <v-spacer></v-spacer>
           <theme-switcher></theme-switcher>
+          <logout></logout>
         </div>
       </div>
     </v-app-bar>
@@ -61,11 +62,13 @@ import { ref } from '@vue/composition-api'
 import { mdiMagnify, mdiBellOutline, mdiGithub } from '@mdi/js'
 import VerticalNavMenu from './components/vertical-nav-menu/VerticalNavMenu.vue'
 import ThemeSwitcher from './components/ThemeSwitcher.vue'
+import Logout from './components/Logout.vue'
 
 export default {
   components: {
     VerticalNavMenu,
     ThemeSwitcher,
+    Logout,
   },
   setup() {
     const isDrawerOpen = ref(null)
