@@ -8,17 +8,8 @@
             to="/"
             class="d-flex align-center"
           >
-            <!-- <v-img
-              :src="require('@/assets/images/logos/logo.svg')"
-              max-height="30px"
-              max-width="30px"
-              alt="logo"
-              contain
-              class="me-3 "
-            ></v-img> -->
-
             <h2 class="text-2xl font-weight-semibold">
-              Materio
+              Registrarse
             </h2>
           </router-link>
         </v-card-title>
@@ -26,10 +17,10 @@
         <!-- title -->
         <v-card-text>
           <p class="text-2xl font-weight-semibold text--primary mb-2">
-            Adventure starts here 🚀
+            Regístrate en MYNIMATION
           </p>
           <p class="mb-2">
-            Make your app management easy and fun!
+            Ingresa tus datos para poder registrarte
           </p>
         </v-card-text>
 
@@ -40,7 +31,7 @@
               v-model="username"
               outlined
               label="Username"
-              placeholder="JohnDoe"
+              placeholder="Ingresa tu nombre de usuario"
               hide-details
               class="mb-3"
             ></v-text-field>
@@ -48,8 +39,8 @@
             <v-text-field
               v-model="email"
               outlined
-              label="Email"
-              placeholder="john@example.com"
+              label="Correo"
+              placeholder="Ingresa tu correo electrónico"
               hide-details
               class="mb-3"
             ></v-text-field>
@@ -59,7 +50,7 @@
               outlined
               :type="isPasswordVisible ? 'text' : 'password'"
               label="Password"
-              placeholder="············"
+              placeholder="Ingresa una contraseña segura"
               :append-icon="isPasswordVisible ? icons.mdiEyeOffOutline : icons.mdiEyeOutline"
               hide-details
               @click:append="isPasswordVisible = !isPasswordVisible"
@@ -71,7 +62,7 @@
             >
               <template #label>
                 <div class="d-flex align-center flex-wrap">
-                  <span class="me-2">I agree to</span><a href="javascript:void(0)">privacy policy &amp; terms</a>
+                  <span class="me-2">Acepto</span><a href="javascript:void(0)">terminos y condiciones</a>
                 </div>
               </template>
             </v-checkbox>
@@ -81,7 +72,7 @@
               color="primary"
               class="mt-6"
             >
-              Sign Up
+              Iniciar sesión
             </v-btn>
           </v-form>
         </v-card-text>
@@ -89,17 +80,17 @@
         <!-- create new account  -->
         <v-card-text class="d-flex align-center justify-center flex-wrap mt-2">
           <span class="me-2">
-            Already have an account?
+            ¿Ya tienes una cuenta?
           </span>
           <router-link :to="{ name:'pages-login' }">
-            Sign in instead
+            ¡Inicia sesión ahora!
           </router-link>
         </v-card-text>
 
         <!-- divider -->
         <v-card-text class="d-flex align-center mt-2">
           <v-divider></v-divider>
-          <span class="mx-5">or</span>
+          <span class="mx-5">o</span>
           <v-divider></v-divider>
         </v-card-text>
 

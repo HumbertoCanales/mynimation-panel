@@ -5,7 +5,7 @@ import axios from 'axios'
 
 Vue.use(Vuex)
 
-const api = 'http://localhost:5000/mynimation-panel/us-central1/app/api'
+const api = 'http://localhost:5001/mynimation-panel/us-central1/app/api'
 
 export default new Vuex.Store({
   state: {

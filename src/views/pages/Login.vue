@@ -8,17 +8,8 @@
             to="/"
             class="d-flex align-center"
           >
-            <!-- <v-img
-              :src="require('@/assets/images/logos/logo.svg')"
-              max-height="30px"
-              max-width="30px"
-              alt="logo"
-              contain
-              class="me-3 "
-            ></v-img> -->
-
             <h2 class="text-2xl font-weight-semibold">
-              Materio
+              Login
             </h2>
           </router-link>
         </v-card-title>
@@ -26,10 +17,10 @@
         <!-- title -->
         <v-card-text>
           <p class="text-2xl font-weight-semibold text--primary mb-2">
-            Welcome to Materio! 👋🏻
+            Inicia sesión en MYNIMATION
           </p>
           <p class="mb-2">
-            Please sign-in to your account and start the adventure
+            Por favor ingresa tu correo y contraseña
           </p>
         </v-card-text>
 
@@ -39,8 +30,8 @@
             <v-text-field
               v-model="email"
               outlined
-              label="Email"
-              placeholder="john@example.com"
+              label="Correo"
+              placeholder="Ingresa tu correo"
               hide-details
               class="mb-3"
             ></v-text-field>
@@ -49,8 +40,8 @@
               v-model="password"
               outlined
               :type="isPasswordVisible ? 'text' : 'password'"
-              label="Password"
-              placeholder="············"
+              label="Contraseña"
+              placeholder="Ingresa tu contraseña"
               :append-icon="isPasswordVisible ? icons.mdiEyeOffOutline : icons.mdiEyeOutline"
               hide-details
               @click:append="isPasswordVisible = !isPasswordVisible"
@@ -69,7 +60,7 @@
                 href="javascript:void(0)"
                 class="mt-1"
               >
-                Forgot Password?
+                ¿Olvidaste tu contraseña?
               </a>
             </div>
 
@@ -78,7 +69,7 @@
               color="primary"
               class="mt-6"
             >
-              Login
+              Iniciar sesión
             </v-btn>
           </v-form>
         </v-card-text>
@@ -86,17 +77,17 @@
         <!-- create new account  -->
         <v-card-text class="d-flex align-center justify-center flex-wrap mt-2">
           <span class="me-2">
-            New on our platform?
+            ¿No tienes cuenta aún?
           </span>
           <router-link :to="{name:'pages-register'}">
-            Create an account
+            Regístrate
           </router-link>
         </v-card-text>
 
         <!-- divider -->
         <v-card-text class="d-flex align-center mt-2">
           <v-divider></v-divider>
-          <span class="mx-5">or</span>
+          <span class="mx-5">o</span>
           <v-divider></v-divider>
         </v-card-text>
 
