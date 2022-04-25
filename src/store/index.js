@@ -5,7 +5,8 @@ import axios from 'axios'
 
 Vue.use(Vuex)
 
-const api = 'http://localhost:5000/mynimation-panel/us-central1/app/api'
+// const api = 'https://us-central1-mynimation-panel.cloudfunctions.net/app/api'
+const api = 'http://localhost:5001/mynimation-panel/us-central1/app/api'
 
 export default new Vuex.Store({
   state: {
@@ -73,6 +74,10 @@ export default new Vuex.Store({
       await axios.post(`${api}/movies`, {
         name: data.name,
         description: data.description,
+        category: data.category,
+        studio: data.studio,
+        url: data.url,
+        img: data.img
       })
         .catch(error => {
           console.log(error)
@@ -82,6 +87,10 @@ export default new Vuex.Store({
       await axios.put(`${api}/movies/${data.id}`, {
         name: data.name,
         description: data.description,
+        category: data.category,
+        studio: data.studio,
+        url: data.url,
+        img: data.img
       })
         .catch(error => {
           console.log(error)
